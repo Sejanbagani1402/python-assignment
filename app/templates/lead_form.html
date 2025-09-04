@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Lead</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      form {
+        max-width: 500px;
+        margin: auto;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      button {
+        margin-top: 15px;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Create Lead Form</h2>
+    <form method="post" action="/create-lead">
+      <label>Company Name (required)</label>
+      <input type="text" name="company" required />
+
+      <label>First Name (required)</label>
+      <input type="text" name="first_name" required />
+
+      <label>Last Name (required)</label>
+      <input type="text" name="last_name" required />
+
+      <label>Email</label>
+      <input type="email" name="email" />
+
+      <label>Mobile</label>
+      <input type="text" name="phone" />
+
+      <label>Industry</label>
+      <select name="industry">
+        <option value="">-None-</option>
+        <option>ASP (Application Service Provider)</option>
+        <option>Data/Telecom OEM</option>
+        <option>ERP (Enterprise Resource Planning)</option>
+        <option>Government/Military</option>
+        <option>Large Enterprise</option>
+        <option>Management ISV</option>
+        <option>MSP (Management Service Provider)</option>
+        <option>Network Equipment Enterprise</option>
+        <option>Non-management ISV</option>
+        <option>Optical Networking</option>
+        <option>Service Provider</option>
+        <option>Small/Medium Enterprise</option>
+        <option>Storage Equipment</option>
+        <option>Storage Service Provider</option>
+        <option>Systems Integrator</option>
+        <option>Wireless Industry</option>
+      </select>
+
+      <label>Description</label>
+      <textarea name="description"></textarea>
+
+      <button type="submit">Create Lead</button>
+    </form>
+  </body>
+</html>

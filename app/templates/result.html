@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lead Submission</title>
+  </head>
+  <body style="font-family: Arial; margin: 40px">
+    {% if success %}
+    <h2 style="color: green">✅ Lead Created Successfully!</h2>
+    <p><b>Company:</b> {{ lead_data["Company"] }}</p>
+    <p>
+      <b>Name:</b> {{ lead_data["First_Name"] }} {{ lead_data["Last_Name"] }}
+    </p>
+    <p><b>Email:</b> {{ lead_data["Email"] }}</p>
+    <p><b>Phone:</b> {{ lead_data["Phone"] }}</p>
+    <p><a href="/form">➕ Create Another Lead</a></p>
+    {% else %}
+    <h2 style="color: red">❌ Failed to Create Lead</h2>
+    <pre>{{ result }}</pre>
+    <p><a href="/form">🔙 Back to Form</a></p>
+    {% endif %}
+  </body>
+</html>
